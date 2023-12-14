@@ -1,13 +1,13 @@
-import express, {Request, Response} from 'express';
+import express, { Request, Response } from "express";
 
-const app = express()
+const app = express();
 
-app.get('/ping', (req: Request, res: Response) => {
-    res.send({
-        data: "pong"
-    })
-})
+app.get("/api/v1/ping", (req: Request, res: Response) => {
+  res.send({
+    data: "pong",
+  });
+});
 
 app.listen(8080, () => {
-    console.log("server starting")
-})
+  console.log("server starting");
+});
