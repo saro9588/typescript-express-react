@@ -1,10 +1,18 @@
 import express, { Request, Response } from "express";
+import cors from "cors";
+import users from "../data";
 
 const app = express();
 
-app.get("/api/v1/ping", (req: Request, res: Response) => {
+const configOptions = {
+  origin: "http://localhost:3000",
+};
+
+app.use(cors(configOptions));
+
+app.get("/api/v1/users", (req: Request, res: Response) => {
   res.send({
-    data: "pong",
+    data: users,
   });
 });
 

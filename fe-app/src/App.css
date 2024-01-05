@@ -40,3 +40,23 @@
 .read-the-docs {
   color: #888;
 }
+
+table,
+td {
+  border: 2px solid #333;
+  padding: 10px;
+}
+
+thead,
+tfoot {
+  background-color: #333;
+  color: #fff;
+}
+
+tbody {
+  background-color: rgb(223, 206, 206);
+}
+
+.IdCol {
+  background-color: red;
+}
